@@ -17,4 +17,8 @@ public class ApiVariables {
     public static final String PRICE_POINT_7 = "PP7";
     public static final String PRICE_POINT_8 = "PP8";
     public static final String PRICE_POINT_9 = "PP";
+    public static final int ERROR_CODE= 1000;
+    public static final String ERROR_MESSAGE = "Invalid Amount!";
+    public static final int SUCCESS_CODE = 0;
+    public static final String SUCCESS_MESSAGE = "Success";
 }
