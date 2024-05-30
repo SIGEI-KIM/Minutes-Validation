@@ -19,12 +19,12 @@ public class ApiServiceImpl implements ApiService {
         MinutesResponse minutesResponse = new MinutesResponse();
         int loanGrade = 250;
         if (payload.getAmount()<minPrice(payload.getValidity(), loanGrade) || payload.getAmount()>maxPrice(payload.getValidity())){
-            minutesResponse.setResponseCode(1000);
-            minutesResponse.setResponseMessage("Invalid Amount");
+            minutesResponse.setResponseCode(ERROR_CODE);
+            minutesResponse.setResponseMessage(ERROR_MESSAGE);
         }else{
             double rate =  getRate(payload.getValidity(), getPricePoint(payload.getAmount()));
-            minutesResponse.setResponseCode(0);
-            minutesResponse.setResponseMessage("Success");
+            minutesResponse.setResponseCode(SUCCESS_CODE);
+            minutesResponse.setResponseMessage(SUCCESS_MESSAGE);
             minutesResponse.setMinutes((int) Math.ceil(payload.getAmount()/rate));
         }
         return minutesResponse;
