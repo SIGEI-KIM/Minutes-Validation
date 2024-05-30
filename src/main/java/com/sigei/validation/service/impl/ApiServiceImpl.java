@@ -31,22 +31,23 @@ public class ApiServiceImpl implements ApiService {
     }
 
     private int maxPrice(String Validity) {
-        if (Validity.equals("1hr")) {
+        if (Validity.equals(VALIDITY_1HR)) {
             return 36;
-        } else if (Validity.equals("3hr")) {
+        } else if (Validity.equals(VALIDITY_3HR)) {
             return 100;
-        } else if (Validity.equals("Midnight")) {
+        } else if (Validity.equals(VALIDITY_MIDNIGHT )) {
             return 250;
-        } else if (Validity.equals("24hr")) {
+        } else if (Validity.equals(VALIDITY_24HR )) {
             return 250;
-        } else if (Validity.equals("7days")) {
+        } else if (Validity.equals(VALIDITY_7DAYS)) {
             return 5000;
-        } else if (Validity.equals("15days")) {
+        } else if (Validity.equals(VALIDITY_15DAYS)) {
             return 10000;
-        } else if (Validity.equals("30days")) {
+        } else if (Validity.equals(VALIDITY_30DAYS)) {
             return 10000;
         } else
             return -1;
+    }
     }
 
     private int minPrice(String Validity, int loanGrade) {
