@@ -51,33 +51,33 @@ public class ApiServiceImpl implements ApiService {
     }
 
     private int minPrice(String Validity, int loanGrade) {
-        if (Validity.equals("1hr") && loanGrade <= 250) {
+        if (Validity.equals(VALIDITY_1HR) && loanGrade <= 250) {
             return 5;
-        } else if (Validity.equals("1hr") && loanGrade > 250) {
+        } else if (Validity.equals(VALIDITY_1HR) && loanGrade > 250) {
             return 5;
-        } else if (Validity.equals("3hr") && loanGrade < 250) {
+        } else if (Validity.equals(VALIDITY_3HR) && loanGrade < 250) {
             return 5;
-        } else if (Validity.equals("3hr") && loanGrade > 250) {
+        } else if (Validity.equals(VALIDITY_3HR) && loanGrade > 250) {
             return 5;
-        } else if (Validity.equals("Midnight") && loanGrade < 250) {
+        } else if (Validity.equals(VALIDITY_MIDNIGHT) && loanGrade < 250) {
             return 10;
-        } else if (Validity.equals("Midnight") && loanGrade > 250) {
+        } else if (Validity.equals(VALIDITY_MIDNIGHT) && loanGrade > 250) {
             return 10;
-        } else if (Validity.equals("24hr") && loanGrade < 250) {
+        } else if (Validity.equals(VALIDITY_24HR) && loanGrade < 250) {
             return 20;
-        } else if (Validity.equals("24hr") && loanGrade > 250) {
+        } else if (Validity.equals(VALIDITY_24HR) && loanGrade > 250) {
             return 20;
-        } else if (Validity.equals("7days") && loanGrade < 250) {
+        } else if (Validity.equals(VALIDITY_7DAYS) && loanGrade < 250) {
             return 50;
-        } else if (Validity.equals("7days") && loanGrade > 250) {
+        } else if (Validity.equals(VALIDITY_7DAYS) && loanGrade > 250) {
             return 100;
-        } else if (Validity.equals("15days") && loanGrade < 250) {
+        } else if (Validity.equals(VALIDITY_15DAYS) && loanGrade < 250) {
             return 50;
-        } else if (Validity.equals("15days") && loanGrade > 250) {
+        } else if (Validity.equals(VALIDITY_15DAYS) && loanGrade > 250) {
             return 250;
-        } else if (Validity.equals("3days") && loanGrade < 250) {
+        } else if (Validity.equals(VALIDITY_30DAYS) && loanGrade < 250) {
             return 50;
-        } else if (Validity.equals("30days") && loanGrade > 250) {
+        } else if (Validity.equals(VALIDITY_30DAYS) && loanGrade > 250) {
             return 250;
         } else
             return -1;
